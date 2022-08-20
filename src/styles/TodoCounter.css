@@ -3,7 +3,9 @@
     padding: 0;
     box-sizing: border-box;
 }
-.TodoCounter-title{
+.TodoCounter{
     text-align: center;
     font-size: 1.5rem;
+    color: #494CA2;
+    padding: .5rem;
 }
