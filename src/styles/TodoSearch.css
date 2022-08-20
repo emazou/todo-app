@@ -1,0 +1,12 @@
+.TodoSearch{
+    border-radius: 0.5rem;
+    width: 90%;
+    height: 2.3rem;
+    font-size: 1rem;
+    text-align: center;
+    border: none;
+    box-shadow: 1px 0px 5px 3px rgba(21, 22, 47, 0.102);
+    color: #554875;
+    margin: 1rem 0;
+    outline: none;
+}
