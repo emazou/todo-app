@@ -1,17 +1,15 @@
 .CreateTodoButton {
   cursor: pointer;
-  width: 10rem;
+  width: 8rem;
   height: 3rem;
-  background: #F4F7F7;
-  border-radius: 1rem;
+  background: #8dcf9c;
+  border-radius: 3rem;
   border: none;
   padding: 0.3rem;
-  font-weight: 500;
+  font-weight: bold;
   color: #1F4E5F;
   font-size: 1.1rem;
   z-index: 1;
-  position: fixed;
-  top: 87vh;
 }
 .CreateTodoButton:hover{
   transform: scale(1.1);
