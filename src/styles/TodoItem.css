@@ -1,14 +1,14 @@
-.TodoItem{
+.TodoItem {
     display: flex;
     justify-content: space-between;
     list-style-position: inside;
     list-style: none;
     padding: 1rem;
-    background-color: #d8dbf4;;
-    border-radius: .5rem;
-    width: 100%;
+    background-color: #aacfd0;
+    border-radius: 0.5rem;
+    width: 99%;
 }
-.Icon{
+.Icon {
     cursor: pointer;
     width: 1.5rem;
     height: 1.5rem;
@@ -17,13 +17,13 @@
     background-color: aliceblue;
 }
 .Icon-check--active {
-    background-color: #97df99;
+    background-color: #25ac29;
 }
-.Icon-check{
+.Icon-check {
     font-weight: 600;
 }
-.Icon-delete{
-    color: #554875;
+.Icon-delete {
+    color: #1f4e5f;
     font-weight: 600;
     background-color: rgb(252, 235, 233);
 }
@@ -31,11 +31,12 @@
     background-color: red;
     color: aliceblue;
 }
-.TodoItem-p{
+.TodoItem-p {
     font-size: 1.1rem;
     font-weight: 600;
-    color: #554875;
+    color: #1f4e5f;
+    padding: 0 1rem;
 }
 .TodoItem-p--complete {
     text-decoration: line-through;
-  }
+}
