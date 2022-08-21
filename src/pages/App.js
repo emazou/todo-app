@@ -6,8 +6,10 @@ import TodoSearch from '../components/TodoSearch';
 import TodoList from '../components/TodoList';
 import TodoItem from '../components/TodoItem';
 import { TodoContext } from '../TodoContext/TodoContext';
-import '../styles/App.css';
 import TodoForm from '../components/TodoForm';
+import TodoStatus from '../components/TodoStatus';
+import '../styles/App.css';
+
 
 export default function App() {
   const { error, loading, searchedTodos, completeTodo, deleteTodo, openModal, setOpenModal, } = React.useContext(TodoContext)
@@ -19,7 +21,7 @@ export default function App() {
         <TodoList>
           {error && <p>Hubo un error</p>}
           {loading && <p>Loading...</p>}
-          {(!loading && !searchedTodos.length) && <p>Crea tu primer todo </p>}
+          {(!loading && !searchedTodos.length) && <TodoStatus/>}
           {searchedTodos.map(todo => (
             <TodoItem
               key={todo.text}

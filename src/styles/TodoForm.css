@@ -1,0 +1,41 @@
+.TodoForm-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    width: 20rem;
+    min-height: 15rem;
+    border-radius: 1rem;
+    padding: 1rem;
+    background-color: #204546;
+}
+.TodoForm-label{
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+.TodoForm-textarea{
+    width: 90%;
+    border-radius: .5rem;
+    padding: .5rem;
+    background-color: #d2e3e4;
+}
+.TodoForm-buttons{
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly;
+}
+.button-cancelar{
+    background-color: rgb(234, 205, 205);
+}
+.button-agregar{
+    background-color: #87c29e;
+}
+.button{
+    cursor: pointer;
+    border: none;
+    padding: 0.5rem;
+    border-radius: 0.4rem;
+    color: #204546;
+    font-size: 1rem;
+    font-weight: 500;
+}

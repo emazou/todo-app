@@ -9,17 +9,18 @@
   align-items: center;
   padding: 1rem;
   width: 100%;
-  height: 100vh;
-  background-color: #E3E7F1;
+  min-height: 100vh;
+  background-color:#0a1515;
 }
 .App-todo{
   display: flex;
+  position: relative;
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
   width: 30rem;
-  min-height: 90vh;
-  background-color: #C6CBEF;
+  height: 90vh;
+  background-color:#143031;
   padding: 2rem 1rem;
   border-radius: 1rem;
   box-shadow: 1px 0px 5px 3px rgba(21, 22, 47, 0.102);

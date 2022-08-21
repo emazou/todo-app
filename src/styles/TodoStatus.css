@@ -1,0 +1,9 @@
+.TodoStatus{
+    text-align: center;
+    width: 90%;
+    padding: 1rem;
+    border-radius: 1rem;
+    background-color: rgba(240, 248, 255, 0.609);
+    color: #325354;
+
+}
