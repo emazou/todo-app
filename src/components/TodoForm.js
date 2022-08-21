@@ -18,8 +18,7 @@ export default function TodoForm() {
     return (
         <form onSubmit={onSubmit}>
             <label>Agregar TODO</label>
-            <input
-            type='text'
+            <textarea
                     value={newTodoValue}
                     onChange={onChange}
                     placeholder="Agrega un TODO"
