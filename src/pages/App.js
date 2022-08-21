@@ -1,5 +1,6 @@
 import React from 'react'
 import CreateTodoButton from '../components/CreateTodoButton';
+import Modal from '../components/Modal';
 import TodoCounter from '../components/TodoCounter';
 import TodoSearch from '../components/TodoSearch';
 import TodoList from '../components/TodoList';
@@ -8,7 +9,7 @@ import { TodoContext } from '../TodoContext/TodoContext';
 import '../styles/App.css';
 
 export default function App() {
-  const { error, loading, searchedTodos, completeTodo, deleteTodo } = React.useContext(TodoContext)
+  const { error, loading, searchedTodos, completeTodo, deleteTodo, openModal, setOpenModal, } = React.useContext(TodoContext)
   return (
     <div className='App-container'>
       <div className='App-todo'>
@@ -28,7 +29,14 @@ export default function App() {
             />
           ))}
         </TodoList>
-        <CreateTodoButton />
+        {openModal && (
+          <Modal>
+            <p>texto</p>
+          </Modal>
+        )}
+        <CreateTodoButton
+        setOpenModal={setOpenModal}
+        />
       </div>
     </div>
   )
