@@ -1,97 +1,19 @@
 .CreateTodoButton {
   cursor: pointer;
-  width: 3rem;
+  width: 10rem;
   height: 3rem;
-  background: #494ca2;
-  border-radius: 1.3rem;
+  background: #F4F7F7;
+  border-radius: 1rem;
   border: none;
-  overflow: hidden;
-  position: relative;
-  transition: width 0.1s ease-in-out;
+  padding: 0.3rem;
   font-weight: 500;
-  color: aliceblue;
+  color: #1F4E5F;
   font-size: 1.1rem;
   z-index: 1;
+  position: fixed;
+  top: 87vh;
 }
-.CreateTodoButton-add-btn:hover {
-  width: 10rem;
-}
-
-.CreateTodoButton-add-btn::before,
-.CreateTodoButton-add-btn::after {
-  transition: width 0.2s ease-in-out, border-radius 0.2s ease-in-out;
-  content: "";
-  position: absolute;
-  height: 4px;
-  width: 10px;
-  top: calc(50% - 2px);
-  background: aliceblue;;
+.CreateTodoButton:hover{
+  transform: scale(1.1);
 }
 
-.CreateTodoButton-add-btn::after {
-  right: 14px;
-  overflow: hidden;
-  border-top-right-radius: 2px;
-  border-bottom-right-radius: 2px;
-}
-
-.CreateTodoButton-add-btn::before {
-  left: 14px;
-  border-top-left-radius: 2px;
-  border-bottom-left-radius: 2px;
-}
-
-.CreateTodoButton:focus {
-  outline: none;
-}
-
-.CreateTodoButton-btn-txt {
-  opacity: 0;
-  transition: opacity 0.2s;
-}
-
-.CreateTodoButton-add-btn:hover::before,
-.add-btn:hover::after {
-  width: 4px;
-  border-radius: 2px;
-}
-
-.CreateTodoButton-add-btn:hover .CreateTodoButton-btn-txt {
-  opacity: 1;
-}
-
-.CreateTodoButton-add-icon::after,
-.CreateTodoButton-add-icon::before {
-  transition: all 0.2s ease-in-out;
-  content: "";
-  position: absolute;
-  height: 20px;
-  width: 2px;
-  top: calc(50% - 10px);
-  background: aliceblue;
-  overflow: hidden;
-}
-
-.CreateTodoButton-add-icon::before {
-  left: 22px;
-  border-top-left-radius: 2px;
-  border-bottom-left-radius: 2px;
-}
-
-.CreateTodoButton-add-icon::after {
-  right: 22px;
-  border-top-right-radius: 2px;
-  border-bottom-right-radius: 2px;
-}
-
-.CreateTodoButton-add-btn:hover .CreateTodoButton-add-icon::before {
-  left: 15px;
-  height: 4px;
-  top: calc(50% - 2px);
-}
-
-.CreateTodoButton-add-btn:hover .CreateTodoButton-add-icon::after {
-  right: 15px;
-  height: 4px;
-  top: calc(50% - 2px);
-}
