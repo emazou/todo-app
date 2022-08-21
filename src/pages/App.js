@@ -7,6 +7,7 @@ import TodoList from '../components/TodoList';
 import TodoItem from '../components/TodoItem';
 import { TodoContext } from '../TodoContext/TodoContext';
 import '../styles/App.css';
+import TodoForm from '../components/TodoForm';
 
 export default function App() {
   const { error, loading, searchedTodos, completeTodo, deleteTodo, openModal, setOpenModal, } = React.useContext(TodoContext)
@@ -31,7 +32,7 @@ export default function App() {
         </TodoList>
         {openModal && (
           <Modal>
-            <p>texto</p>
+            <TodoForm />
           </Modal>
         )}
         <CreateTodoButton
