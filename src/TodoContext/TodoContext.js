@@ -21,9 +21,17 @@ function TodoProvider(props) {
     };
     const deleteTodo = (text) => {
         const newtodos = todos.filter(todo => todo.text !== text)
-        saveTodos(newtodos)
+        saveTodos(newtodos);
     };
-    return (
+    const addTodo = (text) =>{
+        const newTodos = [...todos];
+        newTodos.push({
+            completed:  false,
+            text,
+        });
+        saveTodos(newTodos);
+    }
+    return ( 
         <TodoContext.Provider value={{
             totalTodos,
             completedTodos,
@@ -32,10 +40,12 @@ function TodoProvider(props) {
             error,
             loading,
             searchedTodos,
+            addTodo,
             completeTodo,
             deleteTodo,
             openModal,
             setOpenModal,
+            saveTodos
         }}>
             {props.children}
         </TodoContext.Provider>
