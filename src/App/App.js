@@ -5,19 +5,38 @@ import TodoCounter from '../components/TodoCounter';
 import TodoSearch from '../components/TodoSearch';
 import TodoList from '../components/TodoList';
 import TodoItem from '../components/TodoItem';
-import { TodoContext } from '../TodoContext/TodoContext';
+import { useTodos } from './useTodos';
 import TodoForm from '../components/TodoForm';
 import TodoStatus from '../components/TodoStatus';
 import '../styles/App.css';
 
 
 export default function App() {
-  const { error, loading, searchedTodos, completeTodo, deleteTodo, openModal, setOpenModal, } = React.useContext(TodoContext)
+  const { 
+    error,
+    loading,
+    searchedTodos, 
+    completeTodo, 
+    deleteTodo, 
+    openModal, 
+    setOpenModal, 
+    totalTodos, 
+    completedTodos,
+    searchValue, 
+    setSearchValue,
+    addTodo,
+  } = useTodos()
   return (
     <div className='App-container'>
       <div className='App-todo'>
-        <TodoCounter />
-        <TodoSearch />
+        <TodoCounter
+        totalTodos={totalTodos}
+        completedTodos={completedTodos}
+        />
+        <TodoSearch
+        searchValue={searchValue}
+        setSearchValue={setSearchValue}
+        />
         <TodoList>
           {error && <p>Hubo un error</p>}
           {loading && <p>Loading...</p>}
@@ -34,7 +53,10 @@ export default function App() {
         </TodoList>
         {openModal && (
           <Modal>
-            <TodoForm />
+            <TodoForm
+            addTodo ={addTodo}
+            setOpenModal={setOpenModal}
+            />
           </Modal>
         )}
         <CreateTodoButton
