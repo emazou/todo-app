@@ -1,0 +1,10 @@
+.TodoLoading{
+    text-align: center;
+    padding: 1rem;
+    border-radius: 1rem;
+    background-color: rgba(240, 248, 255, 0.609);
+    color: #325354;
+}
+.TodoLoading--loading{
+    background-color: rgba(240, 248, 255, 0.295);
+}
