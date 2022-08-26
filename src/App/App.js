@@ -9,7 +9,9 @@ import { useTodos } from './useTodos';
 import TodoForm from '../components/TodoForm';
 import TodoStatus from '../components/TodoStatus';
 import '../styles/App.css';
-
+import TodoLoading from '../components/TodoLoading';
+import TodoError from '../components/TodoError';
+import SearchResults from '../components/SearchResults';
 
 export default function App() {
   const { 
@@ -32,16 +34,25 @@ export default function App() {
         <TodoCounter
         totalTodos={totalTodos}
         completedTodos={completedTodos}
+        loading={loading}
         />
         <TodoSearch
         searchValue={searchValue}
         setSearchValue={setSearchValue}
+        loading={loading}
         />
-        <TodoList>
-          {error && <p>Hubo un error</p>}
-          {loading && <p>Loading...</p>}
-          {(!loading && !searchedTodos.length) && <TodoStatus/>}
-          {searchedTodos.map(todo => (
+        <TodoList
+        error={error}
+        loading={loading}
+        searchedTodos={searchedTodos}
+        totalTodos={totalTodos}
+        searchValue={searchValue}
+        onError={()=> <TodoError/>}
+        onLoading={()=> <TodoLoading loading={loading} />}
+        onEmptyTodos={()=> <TodoStatus/>}
+        onEmptySearchResults={(searchText)=> <SearchResults text={searchText}/>}>
+        {
+          todo => (
             <TodoItem
               key={todo.text}
               text={todo.text}
@@ -49,8 +60,10 @@ export default function App() {
               onComplete={() => completeTodo(todo.text)}
               onDelete={() => deleteTodo(todo.text)}
             />
-          ))}
+          )
+        }
         </TodoList>
+
         {openModal && (
           <Modal>
             <TodoForm
